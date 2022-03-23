@@ -1,8 +1,17 @@
 function Main (){
     return (
-        <h1>
-            Main H1 for my first react app ever!
-        </h1>
+        <div  className = "main-content">
+            <h1>
+            Fun facts about React
+            </h1>
+        <ul>
+            <li>Was first released in 2013</li>
+            <li>Was originally created by Jordan Walke</li>
+            <li>Has well over 100l stars on GitHub</li>
+            <li>Is maintained by Facebook</li>
+            <li>Powers thousands of enterprise apps, including mobile apps</li>
+        </ul>
+        </div>
     )
 }
 export default Main
