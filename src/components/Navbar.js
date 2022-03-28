@@ -1,10 +1,7 @@
-import reactLogo192 from "../images/logo192.png"
-function Navbar (){
+function Navbar (props){
     return (
         <nav className = "nav-bar">
-            <img className = "nav-logo" src= {reactLogo192} alt="reactLogo192" />
-            <h3 className = "">ReactFacts</h3>
-            <h4>React Course - Project 1</h4>
+            <img className = "nav-logo" src = {`images/${props.nav_logo}`} />
         </nav>
     )
 }
