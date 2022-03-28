@@ -3,23 +3,28 @@ import Main from './components/Main';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero'
 import Card from './components/Card'
+import cardData from 'data'
 function App() {
-  return (
-    <div className="Container">
-      <Navbar nav_logo = "airbnb-logo.png"/>
-      <Hero hero_group_img = "hero-group.png"/>
-      <Card 
-        card_img = "card-image-1.png"
-        card_star = "card-star.png"
-        card_status = "Sold out"
-        card_rating = "5.0"
-        card_popularity = {6}
-        card_location = "USA"
-        card_description = "Life lessons with this swimmer"
-        card_pricing = {136}
-      />
-    </div>
-  );
+    const cardElements = cardData.map (item => {
+        return (<Card 
+            card_img = {item.coverImg}
+            card_star = "card-star.png"
+            
+            card_rating = {item.stats.rating}
+            card_popularity = {item.stats.reviewCount}
+            card_location = {item.location}
+            card_title = {item.title}
+            card_pricing = {item.price}
+        />)
+    })
+    
+    return (
+        <div className="Container">
+        <Navbar nav_logo = "airbnb-logo.png"/>
+        <Hero hero_group_img = "hero-group.png"/>
+        {cardElements}
+        </div>
+    );
 }
 
 export default App;

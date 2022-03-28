@@ -2,7 +2,7 @@ import React from "react"
 export default function Card (props){
     return (
         <div className = "card">
-            <p className = "card-status">{props.card_status}</p>
+            
             <img className = "card-image" alt = "card image" src = {`/images/${props.card_img}`} />
             <div className = "card-rating-loc">
                 <img className = "card-star" alt = "star" src = {`images/${props.card_star}`} />
@@ -10,7 +10,7 @@ export default function Card (props){
                 <span  className="gray"> {props.card_popularity}</span>
                 <span  className="gray"> {props.card_location}</span>
             </div>
-            <p className = "card-description"> {props.card_description}</p>
+            <p className = "card-description"> {props.card_title}</p>
             <p className = "card-pricing"> <span className="bold">From {props.card_pricing}$</span> / person</p>
         </div>
     )
