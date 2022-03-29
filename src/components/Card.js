@@ -7,7 +7,7 @@ export default function Card (props){
             <div className = "card-rating-loc">
                 <img className = "card-star" alt = "star" src = {`images/${props.card_star}`} />
                 <span className = "card-rating"> {props.card_rating}</span>
-                <span  className="gray"> {props.card_popularity}</span>
+                <span  className="gray"> ({props.card_popularity}) • </span>
                 <span  className="gray"> {props.card_location}</span>
             </div>
             <p className = "card-description"> {props.card_title}</p>
